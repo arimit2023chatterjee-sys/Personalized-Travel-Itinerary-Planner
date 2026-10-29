@@ -1,10 +1,14 @@
 node_modules/
 dist/
+build/
+/public/
+frontend/dist/
+frontend/build/
+frontend/frontend/
 .env
 .env.local
 .DS_Store
 *.log
 backend/data/*.json
-frontend/dist/
 .vite/
 .vercel
