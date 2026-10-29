@@ -42,6 +42,18 @@ test.after(async () => {
   }
 });
 
+test("GET / and /api return 200 with service information", async () => {
+  const rootRes = await fetch(`${baseUrl}/`);
+  assert.equal(rootRes.status, 200);
+  const rootData = await rootRes.json();
+  assert.equal(rootData.status, "ok");
+
+  const apiRes = await fetch(`${baseUrl}/api`);
+  assert.equal(apiRes.status, 200);
+  const apiData = await apiRes.json();
+  assert.equal(apiData.status, "ok");
+});
+
 test("GET /api/health returns 200 with service status", async () => {
   const res = await fetch(`${baseUrl}/api/health`);
   assert.equal(res.status, 200);

@@ -29,6 +29,29 @@ function validatePreferences(body) {
   return null;
 }
 
+app.get("/", (_req, res) => {
+  res.json({
+    name: "Personalized Travel Itinerary Planner API",
+    status: "ok",
+    endpoints: {
+      health: "/api/health",
+      preferences: "POST /api/preferences",
+      recommend: "POST /api/recommend",
+      itinerary: "POST /api/itinerary",
+      trips: "/api/trips",
+      export: "POST /api/export"
+    }
+  });
+});
+
+app.get("/api", (_req, res) => {
+  res.json({
+    name: "Personalized Travel Itinerary Planner API",
+    status: "ok",
+    health: "/api/health"
+  });
+});
+
 app.get("/api/health", (_req, res) => {
   res.json({
     ok: true,
