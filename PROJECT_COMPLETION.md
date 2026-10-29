@@ -1,4 +1,4 @@
-# Project Completion & Milestone Verification
+Build it in the way that render has the frontend of the project and vercel has the back end of the project and organise it that way,# Project Completion & Milestone Verification
 
 Comprehensive mapping of all 7 project milestones and activities to the codebase.
 
