@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: travel-itinerary-frontend
+    runtime: static
+    rootDir: frontend
+    buildCommand: npm install && npm run build
+    staticPublishPath: dist
+    envVars:
+      - key: VITE_API_URL
+        sync: false
