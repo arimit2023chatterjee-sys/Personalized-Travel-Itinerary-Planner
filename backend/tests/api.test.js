@@ -238,3 +238,4 @@ test("Prompt structuring functions format schemas properly", () => {
   const itinPrompt = buildItineraryPrompt({ preferences: testPrefs, destination: getDestination("bali") });
   assert.equal(itinPrompt.user.destination, "Ubud & Bali");
 });
+

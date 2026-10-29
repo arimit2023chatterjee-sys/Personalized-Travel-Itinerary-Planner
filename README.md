@@ -207,16 +207,13 @@ Test coverage includes:
 ## Deployment Guide
 
 ### Frontend on Render
-1. Connect this GitHub repository to Render.
-2. Select **Static Site** (or let `render.yaml` auto-configure).
-3. Set **Root Directory** to `frontend`.
-4. Build Command: `npm install && npm run build`
-5. Publish Directory: `dist`
-6. Add Environment Variable: `VITE_API_URL` pointing to your deployed Vercel API backend.
+You can deploy the frontend to Render in two ways:
+- **Blueprint (Recommended)**: Choose **New +** → **Blueprint**, select this repository, and Render will automatically detect `render.yaml`. Set `VITE_API_URL` to your Vercel backend URL.
+- **Manual Static Site**: Choose **New +** → **Static Site**, connect this repository, leave Root Directory blank (or `frontend`), set Build Command to `npm run build`, and Publish Directory to `dist`. Add the environment variable `VITE_API_URL` pointing to your Vercel backend.
 
 ### Backend on Vercel
 1. Import this repository in Vercel.
 2. Set **Root Directory** to `backend`.
 3. Framework Preset: **Other**.
 4. Configure Environment Variables: `SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY`, `OPENAI_API_KEY` (optional).
-5. Deploy. Verify via `GET /api/health`.
+5. Deploy and verify via `GET /api/health`.
